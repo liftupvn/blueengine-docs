@@ -1,6 +1,6 @@
 # Getting started: Hello world engine!
 
-This doc describes how to use the BlueEngine SDK to develop a simple Serverless engine, and deploy it to the BlueEdge system.
+This doc describes how to create a super simple engine with the BlueEngine SDK, and call it with a simple API. With the knowledge provided, you can easily create much bigger AI engines and deploy it to the cloud in no time :D
 
 ## Setup
 
@@ -16,7 +16,6 @@ Create an example folder called hello-world, then create the `engine.py` file as
 cd ~/path/to/your/workplace
 mkdir -p hello-world-blueengine
 cd hello-world-blueengine
-
 
 # create the engine file 
 touch engine.py
