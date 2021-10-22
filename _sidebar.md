@@ -21,8 +21,9 @@
 
 - BlueEdge Guide
 
-  - [The BlueEdge cloud system architecture](todo.md)
+  - [The BlueEdge cloud system architecture](blueedge-guide/architecture.md)
   - [Communication between engines](todo.md)
+  - [Auto-scaling mechanism](blueedge-guide/scaling.md)
   - [Create APIs and services in BlueEdge monorepo](todo.md)
   - [Create external services and APIs](todo.md)
   - [Deployment on Kubernetes](todo.md)
