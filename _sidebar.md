@@ -2,7 +2,6 @@
 
   - [Install](tutorials/install.md)
   - [First engine](tutorials/get_started.md)
-  - [Multi IO channels](tutorials/multi_io.md)
   - [Working with context](tutorials/context.md)
   - [Multi processing step engine](tutorials/pipeline.md)
   - [Write an API for the engine](tutorials/api.md)
