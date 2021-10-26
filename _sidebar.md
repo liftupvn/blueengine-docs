@@ -3,9 +3,12 @@
   - [Install](tutorials/install.md)
   - [First engine](tutorials/get_started.md)
   - [Working with context](tutorials/context.md)
+  - [Engine with multiple IO channels](tutorials/multi_io.md)
   - [Multi processing step engine](tutorials/pipeline.md)
-  - [Write an API for the engine](tutorials/api.md)
   - [Processing DAG](tutorials/graph.md)
+  - [Calling engine with REST APIs](tutorials/api.md)
+  - [Serving multiple concurrent sessions](tutorials/serving_ccu.md)
+  - [Best practices](tutorials/best_practices.md)
 
 - BlueEngine Guide
 
