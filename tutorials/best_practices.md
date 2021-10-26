@@ -2,7 +2,7 @@
 
 ## 1. Mind the imports
 
-Always remember that each of the processing steps will run in a different [Process](https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process), some libraries may not work as expected if you import them at the top of the file, especially for CUDA related libraries.
+Always remember that each of the processing steps will run in a different [Process](https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process), therefore some libraries may not work as expected if you import them at the top of the file, especially for CUDA related libraries.
 
 So instead of doing this:
 
@@ -95,7 +95,7 @@ def run_something(context, input):
 
 ## 3. Create and cleaning temporary files
 
-In a process, you often create one or many temporally folders and files. After finish processing the session, you should always clean those files. The best place to clean them is inside the `stop_func` function. The rule-of-thumb is, the process which create the files should be the one clean the files. So do:
+In a process, you often create one or many temporary folders and files. After finish processing the session, you should always clean those files. The best place to clean them is inside the `stop_func` function. The rule-of-thumb is, the process which create the files should be the one clean the files. So do:
 
 ```python 
 def start_process(context): # start_func
