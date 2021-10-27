@@ -53,7 +53,6 @@ if __name__ == '__main__':
 The steps is designed to run in waterfall fashion. The previous step will forward data to the next step. As you already see from the [first tutorial](get_started.md), the step write data to the output channels by `return` or `yield` to the channel name, like `Status` or `Result`. To push data to the later step, the current step can `yield` to `forward` channel instead.
 
 ```python
-
 def run_step_one(context, input):
     # Do some processing
     ...
@@ -66,10 +65,6 @@ def run_step_one(context, input):
         }
     }
     ...
-    yield {
-        'forward'
-    }
-
 
 def run_step_two(context, input):
     # Do some processing
@@ -88,7 +83,6 @@ def run_step_two(context, input):
             'type': 'finish',
         }
     }
-
 ```
 
-> Never yield `{'type': 'finish'}` message to `Status` channel in the middle process, since it will tell the engine to stop immediately. 
+> Never yield `{'type': 'finish'}` message to `Status` channel in the middle steps, since it will tell the engine to stop immediately. See [best practices](best_practices.md).

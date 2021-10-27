@@ -6,7 +6,8 @@
   - [Engine with multiple IO channels](tutorials/multi_io.md)
   - [Multi processing step engine](tutorials/pipeline.md)
   - [Processing DAG](tutorials/graph.md)
-  - [Calling engine with REST APIs](tutorials/api.md)
+  - [Calling processing with single engine](tutorials/single_api.md)
+  - [Request processing with multi-engine DAG](tutorials/dag_api.md)
   - [Serving multiple concurrent sessions](tutorials/serving_ccu.md)
   - [Best practices](tutorials/best_practices.md)
 
