@@ -9,6 +9,7 @@
   - [Calling processing with single engine](tutorials/single_api.md)
   - [Request processing with multi-engine DAG](tutorials/dag_api.md)
   - [Serving multiple concurrent sessions](tutorials/serving_ccu.md)
+  - [Deploy engines](tutorials/deploy.md)
   - [Best practices](tutorials/best_practices.md)
 
 - BlueEngine Guide
