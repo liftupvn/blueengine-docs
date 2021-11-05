@@ -226,6 +226,8 @@ The `startData` list provide the user's input data that will be sent to the desi
 
 The `webhooks` list defines how the callbacks request should be made. See (Webhook doc)[tutorials/webhook.md]
 
+The `rank` value is used to prioritize the session. Sessions with higher rank value will be processed first. Default is 0.
+
 For processes that should be processed in a short time (a few seconds), you can set the `waitTimeSecond` value, which will tell the API to block and wait for the session to be finished for maximum that value, and response as soon as the session finish, or the time has been reached. Default is 0, which mean the API will response immediately.
 
 Response from API:
