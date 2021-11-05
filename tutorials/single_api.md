@@ -66,6 +66,8 @@ Body:
 }
 ```
 
+> For webhook registration details, see the [webhook registration doc]()
+
 Response:
 
 ```json
@@ -129,7 +131,7 @@ Response is similar to the response of the POST request, but only the requested 
 
 ## Generic API to call multi-engine DAG
 
-See [dag_api.md]
+See [dag_api](tutorials/dag_api.md)
 
 ## API Authorization
 
