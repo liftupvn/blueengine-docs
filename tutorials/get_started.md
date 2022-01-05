@@ -53,7 +53,7 @@ The run_process function is defined as follow:
 ```python
 def run_process(context, input):
     # data from the Message channel
-    message = input.get('Message', None)
+    message = input.get('Control', None)
     
     if message is None:
       return

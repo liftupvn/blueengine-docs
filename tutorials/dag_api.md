@@ -4,16 +4,16 @@ If all you need is just one engine to process everything, use [single engine API
 
 ## Design the DAG
 
-**DAG**, which stands for *Directed Acyclic Graph*, is a graph that present the connections and flow between engines. Below is a DAG (source: https://en.wikipedia.org/wiki/Directed_acyclic_graph)
+**DAG**, which stands for *Directed Acyclic Graph*, is a graph that presents the connections and data flow between engines. Below is a DAG (source: https://en.wikipedia.org/wiki/Directed_acyclic_graph)
 
 ![Architecture](../images/dag.png)
 
-To set up a DAG that use the BlueEngines, we need to defines:
+To set up a DAG that uses the BlueEngines, we need to define:
 
 - The engines that will receive input data or data from other engines.
-- The data channels between engines, which the engines' channels will connect to to get the data from and send data to. Each data channel have an unique name and a specified data type. 
+- The data channels between engines, which the engines' channels will connect to. Each data channel has a unique name and a specified data type. 
 
-> By seperating the data channel definitions with the engines, the engines don't have to know exactly which engines they are sending data to or receive data from. 
+> By separating the data channel definitions with the engines, the engines don't have to know exactly which engines they are sending data to or receiving data from.
 
 Let's take a look at an example, where we define an OCR processing pipeline that extract text from scanned PDF files. 
 
@@ -21,12 +21,12 @@ Let's take a look at an example, where we define an OCR processing pipeline that
 
 The process contains the following steps:
 
-- Download the PDF file from the user provided URL.
+- Download the PDF file from the user-provided URL.
 - Convert the PDF pages to images.
 - Pre-process the image.
 - Detect the text boxes in the image.
 - Mid-process the boxes: merge boxes to lines, remove small boxes.
-- Extract text in the boxes (OCR)
+- Extract text in the boxes (OCR).
 - Post-process: correct, merge into paragraphs.
 - Write outputs to database.
 
@@ -46,7 +46,7 @@ To define the data channels, we need to understand each engines' input and outpu
 - Engine 2 receive the processed images from the `InputImage` channel, and the images' metadata and other informations from the first engine through `Control` channel. It sends the detected boxes, metadata, and other info to the `Detect Results` channel, and other status to the `Status` channel.
 - Engine 3 also receive the processed images from the `InputImage` channel just like Engine 2, and receive the output from Engine 2's `Detect Results` channel with the `Control` channel. Output to the `OCR Results` are OCR text, which will be received by the user. Status are sent to the `Status` channel.
 
-Try draw the graph down on a paper, like the following:
+Try drawing the graph down on a paper, like the following:
 
 ![Architecture](../images/dag_flow_1.png)
 
@@ -193,12 +193,12 @@ Body:
     }
   ],
   "webhooks": [
-        {
-            "statusTypes": ["finish", "sessionStatusChanged"],
-            "callbackUrl": "",
-            "callbackHeader": {},
-            "resultChan": "Result"
-        }
+    {
+      "statusTypes": ["finish", "sessionStatusChanged"],
+      "callbackUrl": "",
+      "callbackHeader": {},
+      "resultChan": "Result"
+    }
   ],
   "waitTimeSecond": 0
 }
