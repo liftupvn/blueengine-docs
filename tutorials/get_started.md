@@ -123,21 +123,11 @@ In order to let the engine connect to the network system and communicate with ot
 
 ```yaml
 # configs/local.yml
-
 SYSTEM:
-  ENVIRONMENT: 'local'
-  MONGODB_DB_NAME: 'blueeye_db_dev'
   REDIS_ADDRESS: '192.168.80.186'
   REDIS_PORT: 6380
-  KAFKA_BROKERS: ['192.168.80.186:9092']
-  MONGODB_CONNECTION_STR: 'mongodb://192.168.80.25:27017'
-  MANAGER_BROADCAST_CHANNEL: 'MNG_JZp0px0DalZ7je5kKYlZgddd'
-  ENGINE_ATTENDANCE_CHANNEL: 'ATTENDANCE_gPKhENDvX5Zit-SAD3pmXddd'
-  SESSION_MANAGE_REQUEST_CHANNEL: 'MANAGE-q-PAH6U_NwE1Uej-BljeSddd'
-  USAGE_MANAGE_REQUEST_CHANNEL: 'USAGE-q-PAH6U_NwE1Uej-BljeSddd'
-  ENGINE_STATUS_UPDATE_CHANNEL: 'STATUS-gGY7Ot-TAc8aAtfwypz3Fddd'
-  TRACING:
-    ENABLE: False
+  KAFKA_BROKERS: '192.168.80.186:9092'
+  SYSTEM_CHANNEL: 'JZp0px0DalZ7je5kKYlZgddd'
 ```
 
 For systems that are deployed on Kubernetes, this can be deployed as a Secret.
