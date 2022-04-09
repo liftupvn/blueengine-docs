@@ -29,7 +29,7 @@
   - [Auto-scaling mechanism](blueedge-guide/scaling.md)
   - [Create APIs and services in BlueEdge monorepo](todo.md)
   - [Create external services and APIs](todo.md)
-  - [Deployment on Kubernetes](todo.md)
+  - [Deployment on AWS](blueedge-guide/deploy_aws.md)
   - [Sizing and scaling](todo.md)
   - [Utilities](todo.md)
 
